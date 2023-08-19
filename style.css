@@ -16,7 +16,6 @@ label {
 input{
     width: 15em;
     padding: 0.6em 1em !important;
-    margin-bottom: 2em !important;
 }
 
 textarea {
@@ -34,4 +33,12 @@ textarea {
 .btn:hover {
     cursor: pointer;
     background-color: beige;
+}
+
+ul {
+    text-align: left;
+}
+
+li {
+    margin: .5em 0;
 }
