@@ -1,5 +1,37 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 30vh;
+    background-color: rgb(122, 122, 122);
+}
+
+#form {
+    text-align: center;
+}
+
+label {
+    margin-bottom: 2em !important;
+}
+
+input{
+    width: 15em;
+    padding: 0.6em 1em !important;
+    margin-bottom: 2em !important;
+}
+
+textarea {
+    max-width: 20em;
+    min-width: 20em;
+}
+
+.btn {
+    padding: 0.3em 0.8em;
+    border-radius: 20px;
+    border: 0;
+    transition: .3s ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: beige;
 }
