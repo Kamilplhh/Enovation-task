@@ -26,6 +26,10 @@ $(document).ready(function() {
           }
         })
       }
+
+      setTimeout(function(){
+        resetData();
+      }, 5000);
     });
 });
 
@@ -34,4 +38,12 @@ function search(e) {
         $('#keywordList').append('<li>mod_' + (e.value) + '</li>');    
         $('#keyword').val("");
     }
+}
+
+function resetData() {
+  $('#full').val("");
+  $('li').each(function() {
+    $(this).remove();
+  })
+  $('#result').hide();
 }
