@@ -27,5 +27,12 @@ class DatabaseSeeder extends Seeder
                 'password' => Hash::make('password'),
             ]);
         }
+
+        for ($i = 1; $i <= 12; $i++) {
+            DB::table('courses')->insert([
+                'name' => Str::random(10),
+                'user_id' => random_int(1,10),
+            ]);
+        }
     }
 }
