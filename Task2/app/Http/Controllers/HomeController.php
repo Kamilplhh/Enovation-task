@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $objects = array();
+        $users = User::inRandomOrder()
+            ->limit(10)
+            ->get();
+
+        foreach($users as $user){
+            $id = $user->id;
+            $courses = Course::where('user_id', $id)->get();
+
+            array_push($objects, $courses);
+        }
+
+        return view('home', compact(['objects']));
     }
 }
